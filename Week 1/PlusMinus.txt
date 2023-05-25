@@ -1,0 +1,31 @@
+function plusMinus(arr) {
+    // Write your code here
+    
+    //initialize variables
+    var noOfPositive = 0;
+    var noOfNegative = 0
+    var noOfZero = 0;
+    var count = arr.length;
+    
+    //count how many are positive, negative or zero
+    for  (var each in arr) {
+        if (arr[each] > 0) {
+            noOfPositive += 1;
+        } else if (arr[each] == 0) {
+            noOfZero += 1;
+        } else {
+            noOfNegative +=1;
+        }
+    }
+    
+    //find the fraction
+    var fractionOfPositve = noOfPositive / count;
+    var fractionOfNegative = noOfNegative / count;
+    var fractionOfZero = noOfZero / count;
+    
+    //return answer
+    console.log(fractionOfPositve);
+    console.log(fractionOfNegative);
+    console.log(fractionOfZero);
+
+}
