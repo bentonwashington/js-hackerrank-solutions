@@ -1,0 +1,20 @@
+function miniMaxSum(arr) {
+    // Write your code here
+    
+    //identify min and max while initializing variable for sum
+    var min = Math.min.apply(Math, arr);
+    var max = Math.max.apply(Math, arr);
+    var sum = 0;
+    
+    //find the sum of the array
+    for (var i in arr) {
+        sum += arr[i]
+    }
+    
+    //subtract the min to get the maxSum and max to get the minSum
+    var maxSum = sum - min;
+    var minSum = sum - max;
+    
+    //console log your answers
+    console.log(`${minSum} ${maxSum}`);
+}
