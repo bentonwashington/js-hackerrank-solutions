@@ -1,0 +1,36 @@
+function breakingRecords(scores) {
+    // Write your code here
+    
+    //initialize variables to keep track of high and low score
+    var high = scores[0];
+    var low= scores[0];
+    
+    //initialize variables to keep track of times records broken
+    var highTimes = 0;
+    var lowTimes = 0;
+    
+    //variable that will have to be returned
+    var timesBroken = [];
+    
+    //loop through scores to keep track of high and low score as well amount of times records broken
+    for (var each in scores) {
+        
+        if (scores[each] > high) {
+            highTimes += 1;
+            high = scores[each]
+            }
+            
+        if (scores[each] < low) {
+            lowTimes += 1;
+            low = scores[each]
+            }
+}
+
+//push values into array
+timesBroken.push(highTimes);
+timesBroken.push(lowTimes);
+
+//JESUS IS KING!
+return timesBroken
+
+}

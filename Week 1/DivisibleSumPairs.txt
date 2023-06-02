@@ -1,0 +1,27 @@
+function divisibleSumPairs(n, k, ar) {
+    // Write your code here
+    
+    //initialize variable to keep count of pairs
+    var pairsTotal = 0;
+    
+    //loop through the array but don't repeat numbers
+    for (var i in ar) {
+        for (var j in ar) {
+            if (i == j) {
+                continue
+            }
+            //find sum
+            var sum = ar[i] + ar[j];
+            
+            //which pairs meet the standard
+            if (sum % k == 0 && i < j){
+                pairsTotal += 1;
+            }
+            
+        }
+        
+        
+    }
+    //JESUS!!
+    return pairsTotal
+}
