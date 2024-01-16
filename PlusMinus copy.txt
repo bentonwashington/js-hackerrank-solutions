@@ -1,0 +1,31 @@
+function timeConversion(s) {
+    // Write your code here
+    
+    //First, we need to figure out how to identify the time and initialize variables
+    var merideum = s.substr(8, 9);
+    var hh = s.substr(0, 2);
+    var numhh = Number(hh);
+    var other = s.substr(2, 6);
+    
+    //loop and check
+    if ((merideum == "PM") && (numhh < 12)) {
+        var newhh = numhh + 12;
+        var stringhh = String(newhh);
+        var milTime = `${stringhh}${other}`;
+    } 
+    else if ((merideum == "PM") && (hh == "12")) {
+        var stringhh = "12";
+        var milTime = `${stringhh}${other}`;
+    } 
+    else if ((merideum == "AM") && (numhh < 12)) {
+        var milTime = s.substr(0, 8);
+    }
+    else if ((merideum == "AM") && (hh == "12")) {
+        var stringhh = "00";
+        var milTime = `${stringhh}${other}`;
+    } 
+    
+    //JESUS
+    return milTime
+
+}

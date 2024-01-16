@@ -1,0 +1,20 @@
+function miniMaxSum(arr) {
+    // Write your code here
+    
+    //initialize a variable for a sorted array from smallest to largest
+    var sortedArr = arr.sort(function(a, b) {
+        return a - b;
+        });
+        
+    //initialize a variable and find the minSum
+    var minSum = sortedArr[0] + sortedArr[1] + sortedArr[2] + sortedArr[3];
+    
+    //initialize a variable and find the maxSum
+    var maxSum = sortedArr[1] + sortedArr[2] + sortedArr[3] + sortedArr[4];
+    
+    //print the two numbers
+    console.log(`${minSum} ${maxSum}`);
+    
+    //JESUS!!!
+
+}
