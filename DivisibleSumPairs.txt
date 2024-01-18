@@ -1,0 +1,27 @@
+function divisibleSumPairs(n, k, ar) {
+    // Write your code here
+    
+    //initialize variable. keep count of the pairs.
+    var count = 0;
+    
+    //loop rules,  first loop though i then loop through another time
+    for (let i in ar) {
+        for (let j in ar) {
+            //make sure you don't get the same numbers
+            if (j != i) {
+                //get the sum pair and sum % k
+                let sum = ar[i] + ar[j];
+                let div = sum % k;
+                
+                //if all checks out, add 1
+                if ((i < j) && (div == 0)) {
+                    count++;
+                }
+            }
+        }
+    }
+    
+    //JESUS IS KING
+    return count;
+
+}
